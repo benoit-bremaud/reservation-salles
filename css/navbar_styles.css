@@ -1,0 +1,78 @@
+/* Mobile first */
+body{
+    margin: 0; /* Supprime les marges blanches tout autour de la page */
+    /* background-image: url(../../images/salle_reunion/meeting-1177454_1280.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat; */
+}
+
+.navbar{
+    background-color: black; /* Fond de couleur noir */
+    padding: 10px; /* permet de séparer un peu avec les marges */
+    display: flex; /* répartir à droite et à gauche */
+    justify-content: space-between; /* répartir à droite et à gauche, espacement entre les deux */
+    align-items: center; /* Verticlament allignés */
+    position: relative; /*  */
+
+}
+.logo{
+    color: white; /* Affiche le logo en blanc */
+    font-size: 1.5rem; /* Affiche le logo un peu plus grand */
+    line-height: 70px; /**/
+}
+.icon{
+    fill: white; /* C'est un SVG, donc on doit utiliser le paramètre fill */
+    cursor: pointer; /* Change le type du curseur lorsqu'on passe dessus */ 
+}
+.navbar input, .nav-menu, .dropdown{
+    display: none; /* Les inputs sont de type chechbox, display: none permet de faire disparaitre les cases à cocher */
+}
+
+/* Tous les "id" qui commencent par un "btn" */
+[id^=btn]:checked + ul{
+    display: block;
+}
+.nav-menu{
+    background-color: black;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+}
+
+.nav-item a, .drop-item a, .show{
+    color: white;
+    text-decoration: none;
+    line-height: 70px;
+    font-size: 1.2rem;
+}
+
+.nav-menu a:hover, .show:hover{
+    /* font-weight: bold; */
+    color: red;
+}
+
+@media screen and (min-width: 768px){
+    .icon{
+        display: none; /* Masquer le bouton */
+    }
+    .nav-menu{
+        display: initial;
+        position: static;
+    }
+    .nav-item{
+        display: inline-block;
+        margin-left: 20px;
+        position: relative;
+    }
+    .dropdown{
+        position: absolute;
+        background-color: black;
+        top: 70px;
+        right: 0;
+        padding-right: 40px;
+        width: max-content;
+
+    }
+
+}
