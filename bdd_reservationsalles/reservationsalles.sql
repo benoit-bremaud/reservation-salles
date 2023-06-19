@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : lun. 19 juin 2023 à 08:33
+-- Généré le : lun. 19 juin 2023 à 08:38
 -- Version du serveur : 8.0.33
 -- Version de PHP : 8.0.26
 
@@ -20,6 +20,23 @@ SET time_zone = "+00:00";
 --
 -- Base de données : `reservationsalles`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `reservations`
+--
+
+DROP TABLE IF EXISTS `reservations`;
+CREATE TABLE IF NOT EXISTS `reservations` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `titre` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `description` text COLLATE utf8mb4_general_ci NOT NULL,
+  `debut` datetime NOT NULL,
+  `fin` datetime NOT NULL,
+  `id_utilisateur` int NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
